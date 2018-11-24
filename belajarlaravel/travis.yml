@@ -1,0 +1,32 @@
+# Tentukan role
+# sudi: reqquired
+# 
+# 
+# distLtrusty
+# 
+# osyang digunakan
+- windows
+
+# language
+- php
+# versi bahasa yang digunakan
+
+ # tentunkan branches:
+  only:
+    -master #-> QA/Staging 
+    -develop #-> Devserver
+
+# jalankan install packgaes dll
+before install:
+   - cp .env.travis .env
+   - composer install
+   - php artisan ker:generate
+
+
+   # script -> main exction
+   #script;
+   - ./vendor/bin/phpuint
+   
+# ketika kondisi main execution finish
+# after succes;
+  
